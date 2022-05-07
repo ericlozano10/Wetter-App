@@ -1,0 +1,120 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Test weather application for school project",
+          "examplePhrases": [
+            "Alexa ask the weather app for local weather",
+            "Alexa ask the weather app whats the weather in Boston",
+            "Alexa open the weather app get the weather in Seattle"
+          ],
+          "keywords": [],
+          "name": "Wetter App",
+          "description": "Sample Full Description",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "There are no special instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionMode": "PRIVATE",
+      "distributionCountries": [
+        "US"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:806907877117:function:0219a17e-ea21-4549-98ea-7b950d1dc2d7:Release_1"
+        },
+        "interfaces": [
+          {
+            "supportedViewports": [
+              {
+                "minHeight": 480,
+                "mode": "HUB",
+                "shape": "ROUND",
+                "maxHeight": 480,
+                "minWidth": 480,
+                "maxWidth": 480
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 600,
+                "minWidth": 1024,
+                "maxWidth": 1024
+              },
+              {
+                "minHeight": 800,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 800,
+                "minWidth": 1280,
+                "maxWidth": 1280
+              },
+              {
+                "minHeight": 540,
+                "mode": "TV",
+                "shape": "RECTANGLE",
+                "maxHeight": 540,
+                "minWidth": 960,
+                "maxWidth": 960
+              }
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:806907877117:function:0219a17e-ea21-4549-98ea-7b950d1dc2d7:Release_1"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:806907877117:function:0219a17e-ea21-4549-98ea-7b950d1dc2d7:Release_1"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:806907877117:function:0219a17e-ea21-4549-98ea-7b950d1dc2d7:Release_1"
+            }
+          }
+        },
+        "dialogManagement": {
+          "dialogManagers": [
+            {
+              "type": "AMAZON.Conversations"
+            }
+          ],
+          "sessionStartDelegationStrategy": {
+            "target": "AMAZON.Conversations"
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::devices:all:geolocation:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
